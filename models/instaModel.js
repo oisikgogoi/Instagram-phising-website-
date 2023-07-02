@@ -11,4 +11,4 @@ const InstaSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('InstaModel',InstaSchema)
+module.exports = mongoose.model('Credential',InstaSchema)
