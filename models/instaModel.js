@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const InstaSchema = mongoose.Schema({
+const CrendentialSchema = mongoose.Schema({
     email:{
         type:String,
         required:[true,'please enter the username']
@@ -11,4 +11,4 @@ const InstaSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Credential',InstaSchema)
+module.exports = mongoose.model('Credential',CrendentialSchema)
